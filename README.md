@@ -10,3 +10,8 @@ Ik wil in eerste instantie meer leren over fancy animaties en typografie en meer
 Ik ga de homepagina en de collectie pagina maken. 
 ## breakdown schets
 
+## Week 1
+Links naar codepen opdrachten: 
+Opdracht 1: https://codepen.io/chriskes/pen/KKzyyGp
+Opdracht 2: https://codepen.io/chriskes/pen/abNVVQw
+
