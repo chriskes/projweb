@@ -1,5 +1,6 @@
 # Frontend - project web
-Frontend 2 repository voor project web
+Auteur: Chris
+Frontend 2 repository voor mijn website
 ## Startniveau Frontend 2 - Rode Piste
 Startniveau is iets bovengemiddeld denk ik, dus rode piste. Ik heb als stage ook gewerkt met veel frontend en bij mijn minor virtual reality ook wat geprogrammeerd hier en daar. Natuurlijk als herkanser zijn wat aspecten ook herhaling. Hier tegenover denk ik ook dat ik redelijk wat moet opfrissen en weer een beetje in die developer mindset moet komen. 
 ## Welke website ga ik maken?
