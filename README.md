@@ -16,3 +16,8 @@ Links naar codepen opdrachten:
 Opdracht 1: https://codepen.io/chriskes/pen/KKzyyGp
 Opdracht 2: https://codepen.io/chriskes/pen/abNVVQw
 
+## Week 2
+Links naar codepen opdrachten: 
+Opdracht 1: https://codepen.io/chriskes/pen/PoNEyxm
+Opdracht 2: https://codepen.io/chriskes/pen/qBZxrLK?editors=1100
+
