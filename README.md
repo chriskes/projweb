@@ -21,3 +21,10 @@ Links naar codepen opdrachten:
 Opdracht 1: https://codepen.io/chriskes/pen/PoNEyxm
 Opdracht 2: https://codepen.io/chriskes/pen/qBZxrLK?editors=1100
 
+## Week 3
+Flexbox Froggy gedaan, laatste level was best lastig. De truc was met flex-wrap, de wrap-reverse te gebruiken. 
+```css
+flex-flow:column-reverse wrap-reverse;
+justify-content:center;
+align-content:space-between;
+```
