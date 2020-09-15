@@ -10,7 +10,7 @@ Ik wil in eerste instantie meer leren over fancy animaties en typografie en meer
 ### Welke pagina's ga ik namaken?
 Ik ga de homepagina en de collectie pagina maken. 
 ### breakdown schets
-![website_breakdown](./pictures/Breakdown.jpg)
+![website_breakdown](./images/Breakdown.jpg)
 
 ## Week 1
 Links naar codepen opdrachten: 
