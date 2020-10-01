@@ -1,18 +1,83 @@
 /* CSS Document */
-*, *::after, *::before {
-  box-sizing:border-box;
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+main {
+    margin: 0;
+}
+
+ul {
+    padding-inline-start: 0px;
 }
 
 Header nav ul {
     display: flex;
-    list-style-type:none;
+    list-style-type: none;
     flex-wrap: wrap;
+    margin: 0;
+
 }
 
-header nav ul li:first-of-type img{
+header nav ul li:first-of-type img {
     width: 20%;
+    flex-grow: 1;
 }
 
-header nav ul li:last-of-type img{
+
+
+header nav ul li:last-of-type img {
     width: 1em;
+}
+
+main section ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+
+}
+
+section ul li {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+section ul li a {
+    display: block;
+}
+
+section ul li img {
+width: 40%;
+position: absolute;
+    right: 0;
+    top: 0;
+
+}
+
+
+main section ul li:nth-of-type(1) {
+    background-color: rgb(255, 205, 0);
+}
+
+main section ul li:nth-of-type(2) {
+    background-color: rgb(255, 142, 123);
+}
+
+main section ul li:nth-of-type(3) {
+    background-color: rgb(254, 183, 173);
+}
+
+main section ul li:nth-of-type(4) {
+    background-color: rgb(206, 220, 0);
+}
+
+main section ul li:nth-of-type(5) {
+    background-color: rgb(0, 0, 0);
 }
