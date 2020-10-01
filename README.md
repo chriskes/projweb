@@ -11,7 +11,7 @@ Ik wil in eerste instantie meer leren over fancy animaties en typografie en meer
 Ik ga de homepagina en de collectie pagina maken. 
 ### breakdown schets
 ![website_breakdown](./images/Breakdown.jpg)
-![website_breakdown2](./images/breakdown2.jpg)
+![website_breakdown2](./images/breakdown2.png)
 
 ## Week 1
 #### WG1
