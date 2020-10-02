@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Chris Kesarsing" content="Chris Kesarsing">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>MoMA</title>
+
+    <link href="styles/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><img src="images/MoMA.png" alt="MoMA Logo"></li>
+                <li>Tickets</li>
+                <li>Members</li>
+            </ul>
+            <ul>
+                <li>Visit</li>
+                <li>What's on</li>
+                <li>Art</li>
+                <li>Store</li>
+                <li><img src="images/magnifying-glass.png" alt="Search icon"></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>The Collection</h1>
+            <p>Our <span>evolving collection</span> contains almost 200,000
+                works of modern and contemporary art. More
+                than 89,000 works are currently available online.</p>
+        </section>
+        <section>
+            <form action="">
+                <fieldset>
+                    <legend>Filter MoMA collection</legend>
+
+                    <label for="collectionsearch">
+                        <input type="text" id="collectionsearch" name="collectionsearch" placeholder="Search artists and works">
+                    </label>
+                    <div>
+                        <p>filters</p>
+                        <label for="classificationfilter">
+                            <input list="classifications" name="classificationfilter" id="classificationfilter">
+                            <datalist id="classifications">
+                                <option value="Any classification (77764)">
+                                <option value="Architecture (2385)">
+                                <option value="Design (8022)">
+                                <option value="Drawing (13599)">
+                                <option value="Film (154)">
+                            </datalist>
+                        </label>
+                        <label for="fromdate">
+                            <input list="datestart" name="fromdate" id="fromdate">
+                            <datalist id="datestart">
+                                <option value="pre-1850">
+                                <option value="1851">
+                                <option value="1852">
+                                <option value="1853">
+                                <option value="1854">
+                            </datalist>
+                        </label>
+                        <p>trough</p>
+                        <label for="todate">
+                            <input list="dateend" name="todate" id="todate">
+                            <datalist id="dateend">
+                                <option value="2020">
+                                <option value="2019">
+                                <option value="2018">
+                                <option value="2017">
+                                <option value="2016">
+                            </datalist>
+                        </label>
+                        <label for="recentbutton">Recent acquisition
+                            <input type="radio" id="recentbutton" name="recent" value="recent">
+                        </label>
+                        <label for="uncatalogedbutton">Include uncataloged works
+                            <input type="radio" id="uncatalogedbutton" name="uncataloged" value="uncataloged">
+                        </label>
+                    </div>
+                    <label for="hasimagebutton">Has image
+                        <input type="radio" id="hasimagebutton" name="hasimage" value="hasimage">
+                    </label>
+                    <label for="onviewbutton">On view
+                        <input type="radio" id="onviewbutton" name="onview" value="onview">
+                    </label>
+                </fieldset>
+            </form>
+        </section>
+        
+        <section>
+            <p>Showing 77,764 out of <span>89,402 works</span> online</p>
+            <ul id="collectionlist">
+                <li>
+                    <img src="images/x-poster.png" alt="X Poster by Wade Guyton">
+                    <p>Wade Guyton</p>
+                    <p>X Poster (Untitled, 2007, Epson UltraChrome inkjet on linen, 84 x 69 inches, WG1211)</p>
+                    <p>2019</p>
+                </li>
+                <li></li>
+            </ul>
+            
+        </section>
+    </main>
+</body></html>
