@@ -39,5 +39,9 @@ Opdracht 2: https://codepen.io/chriskes/pen/vYGaYMO
 - SVG niet al img's inladen maar echt apart als SVG's kijk of hier tijd voor is anders gebruik .png
 - Eerst knopjes werkend van form, en hele nette html. Daarop haal je sneller voldoende.  Beter robuste html form dan fancy vormgegeven. 
 - Top button in footer met # easy win interactiehttps://www.w3schools.com/cssref/pr_scroll-behavior.asp > easy win en heel fancy 
+## Week 4
 
+## Week 5
+![grids](./images/grid.jpg)
+Ik denk dat ik voor dit stuk wel grids moet gebruiken, zo zit er een duidelijke verhouden tussen de tekst en de img. Als ik de img in een wrapper doet kan ik hem een mooie overflow: hidden geven net zoals de moma site. 
 
