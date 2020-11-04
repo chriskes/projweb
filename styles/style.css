@@ -101,6 +101,19 @@ header nav ul li a {
     text-decoration: none;
 }
 
+.stickyheader {
+    position: fixed;
+    z-index: 10;
+    background: white;
+    width: 100%;
+    transform: translateY(-7em);
+    animation
+}
+
+.stickynewssection {
+    margin-top: 4em;
+}
+
 /*---------------- Footer styles-------------------*/
 
 
@@ -240,6 +253,8 @@ section ul#newslist li:nth-child(even) a {
     padding: 0em 1em 0em 1em;
     margin: 0;
     width: 60%;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .newswrapper p,
