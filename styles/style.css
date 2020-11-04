@@ -6,11 +6,16 @@
 }
 
 /*====================== Global styles=============================*/
-@import url(//db.onlinewebfonts.com/c/211be15f3b79857b52ec64538f6032a2?family=MoMA+Sans+Web+Semibold);
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     margin: 0;
-    font-family: MoMA Sans Web Medium, Helvetica, serif;
+    font-family: 'Libre Franklin', sans-serif;
+
 }
 
 main {
@@ -19,63 +24,251 @@ main {
 
 ul {
     padding-inline-start: 0px;
+    list-style: none
+}
+
+section:not(#newssection) {
+    padding: 0em 1.5em 4em 1.5em;
+}
+
+section {
+    padding-bottom: 4em;
+}
+
+h4 {
+    color: black;
+    font-weight: 900;
+    line-height: 1em;
+    font-size: 1.5em;
+    margin: 0;
+}
+
+h5 {
+    color: rgb(250, 195, 0);
+    font-weight: 900;
+    line-height: 1em;
+    font-size: 1.2em;
+    margin: 0;
+    margin: 1em 0 .2em 0;
+}
+
+h6 {
+    font-weight: 900;
+    line-height: 1em;
+    font-size: .8em;
+    margin: 0;
+    margin: 1em 0 .2em 0;
+}
+
+.arrow {
+ transform: translateY(30%);
 }
 
 /*---------------- Header styles-------------------*/
 
-Header nav ul {
+header {
+    position: relative;
+}
+
+header nav ul {
     display: flex;
-    list-style-type: none;
-    flex-wrap: wrap;
-    margin: 0;
-
+    list-style: none;
+    justify-content: space-around;
+    font-weight: 900;
 }
 
-header nav ul li:first-of-type img {
-    width: 20%;
-    flex-grow: 1;
+header nav ul:first-of-type {
+    color: rgb(0, 207, 181);
 }
 
 
+header nav ul:first-of-type img {
+    width: 7em;
+}
 
-header nav ul li:last-of-type img {
+
+header nav ul:last-of-type img {
     width: 1em;
+}
+
+
+header nav ul:last-of-type {
+    padding: 0em 1em 0em .25em;
+}
+
+header nav ul li a {
+    color: black;
+    text-decoration: none;
 }
 
 /*---------------- Footer styles-------------------*/
 
+
 footer {
-    background-color: #444;
+    background-color: rgb(68, 68, 68);
+    color: white;
+    padding: 2em 1.5em 2em 1.5em;
+
 }
+
+footer a {
+    font-weight: 900;
+    line-height: 1em;
+    font-size: 1.2em;
+    color: white;
+    text-decoration: none;
+}
+
+footer .adresswrapper {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+footer ul {
+    position: relative;
+}
+
+footer li {
+    padding-bottom: 1.5em;
+}
+
+footer #toplink {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: .9em;
+    align-content: 
+}
+
+footer #toplink img {
+    display: inline;
+    width: 1.2em;
+    transform: translateY(20%);
+    margin-left: .5em;
+}
+
+footer .toswrapper {
+    display: flex;
+    flex-wrap: wrap
+}
+
+footer .toswrapper li {
+    width: 50%
+}
+
+
+footer .toswrapper li a {
+    font-size: 1em;
+}
+
+footer .toswrapper li:last-child {
+    width: 100%;
+    padding-bottom: 0em;
+}
+
+.greytext {
+    color: grey;
+    font-size: .9em
+}
+
+form div {
+    background: none;
+    position: relative;
+    margin-bottom: 3em;
+}
+
+form #email {
+    width: 100%;
+    border: none;
+    background: none;
+    color: white;
+    padding: .5em 0em .5em 0em;
+    border-bottom: 3px white solid;
+}
+
+
+form input::placeholder {
+    color: white;
+    font-weight: 900;
+    line-height: 1em;
+    font-size: 1.2em;
+}
+
+
+form #submitbutton {
+
+    width: 1.5em;
+    position: absolute;
+    top: .2em;
+    right: 0;
+}
+
 /*====================== Homepage styles=============================*/
 
-/*---------------- Main news styles-------------------*/
+/*  Main news styles  */
+/*
 
 main section ul#newslist {
     display: flex;
     flex-wrap: wrap;
     list-style-type: none;
-
 }
+*/
 
 section ul#newslist li {
     position: relative;
     width: 100%;
-    overflow: hidden;
+    height: 13em;
 }
 
 section ul#newslist li a {
-    display: block;
+    position: relative;
+    width: 100%;
+    height: inherit;
+    overflow: hidden;
+    display: flex;
+    text-decoration: none;
+    color: black;
 }
 
-section ul#newslist li img {
+section ul#newslist li:nth-child(even) a {
+    flex-direction: row-reverse;
+}
+
+
+.newswrapper {
+    padding: 0em 1em 0em 1em;
+    margin: 0;
+    width: 60%;
+}
+
+.newswrapper p,
+.newswrapper h3,
+.adresswrapper p {
+    font-weight: 900;
+    line-height: 1em;
+    font-size: 1.5em;
+}
+
+.newswrapper p,
+.adresswrapper p {
+    font-size: 1em;
+}
+
+.lastchance {
+    color: rgb(255, 180, 40);
+}
+
+.imagewrapper {
     width: 40%;
-    position: absolute;
-    right: 0;
-    top: 0;
-
+    overflow: hidden;
+    margin: 0;
 }
 
+.imagewrapper img {
+    transform: translatex(-30%);
+    height: 13em;
+}
 
 main section ul#newslist li:nth-of-type(1) {
     background-color: rgb(255, 205, 0);
@@ -93,8 +286,56 @@ main section ul#newslist li:nth-of-type(4) {
     background-color: rgb(206, 220, 0);
 }
 
-main section ul#newslist li:nth-of-type(5) {
+main section ul#newslist li:nth-of-type(5),
+main section ul#newslist li:nth-of-type(5) .newswrapper {
     background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+
+.adresswrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 1em 0 1em;
+
+}
+
+.adresswrapper li {
+    width: 50%;
+
+}
+
+section#magazine img {
+    width: 100%;
+}
+
+#magazine h4 span {
+    font-style: italic;
+}
+
+#magazine p span {
+    color: darkgrey;
+    display: block
+}
+
+section#support img {
+    width: 100%;
+}
+
+
+.flexcontainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.storeitem {
+    width: 45%;
+}
+
+.storeitem img {
+    width: 100%
 }
 
 /*====================== collection page styles=============================*/

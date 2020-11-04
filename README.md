@@ -39,9 +39,14 @@ Opdracht 2: https://codepen.io/chriskes/pen/vYGaYMO
 - SVG niet al img's inladen maar echt apart als SVG's kijk of hier tijd voor is anders gebruik .png
 - Eerst knopjes werkend van form, en hele nette html. Daarop haal je sneller voldoende.  Beter robuste html form dan fancy vormgegeven. 
 - Top button in footer met # easy win interactiehttps://www.w3schools.com/cssref/pr_scroll-behavior.asp > easy win en heel fancy 
+
 ## Week 4
+Ik wou de 2 adressen met flexbox oplossen zodat er 2 items boven staan en 1 ondergecentreerd. Na wat experimenteren kwam ik er niet echt uit. Ik heb flexy boxes generator gebruikt: https://the-echoplex.net/flexyboxes/. Hier heb ik meegespeeld en gekeken wat wat nou precies doet. Ik heb de eerste 2 items wel moeten definieren met flex-grow en dan een waarde van 1 meegeven. De laatste p item die geef ik een flex-basis van 100% zodat hij de volledige breedte kan innemen. 
+
+Echter als ik dit probeer te implementeren werkt het niet. Ik dacht veel te moeilijk. De items moeten gewoon 50% width zijn, dan breekt de 3e item vanzelf.
 
 ## Week 5
-![grids](./images/grid.jpg)
-Ik denk dat ik voor dit stuk wel grids moet gebruiken, zo zit er een duidelijke verhouden tussen de tekst en de img. Als ik de img in een wrapper doet kan ik hem een mooie overflow: hidden geven net zoals de moma site. 
 
+Ik zie veel verschillende forms voorbij komen op w3schools, developer.mozilla, w3. Ik ben zelf bij de markup die te vinden is bij CSS-tricks gebleven aangezien dat duidelijk staat afgebeeld. Op basis van deze structuur ga ik mijn forms bouwen in mijn applicatie: https://css-tricks.com/snippets/html/example-form-markup/. 
+
+ 
