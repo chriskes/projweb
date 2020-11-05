@@ -4,9 +4,14 @@
 *::before {
     box-sizing: border-box;
 }
+:root {
+    --blue: rgb(0, 207, 181);
+}
+
 
 /*====================== Global styles=============================*/
 @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 
 html {
     scroll-behavior: smooth;
@@ -115,7 +120,7 @@ header nav ul li a,
 }
 
 #topnav li a {
-    color: rgb(0, 207, 181);
+    color: var(--blue);
 }
 
 
@@ -125,20 +130,38 @@ header nav ul li a,
     background: url(/images/magnifying-glass.png) center no-repeat;
     background-size: 1.5em;
     border: none;
+    position: relative;
 }
 
-.stickyheader {
+.underline::after {
+    position: absolute;
+    height: 3px;
+    width: 1em;
+    content: '';
+    margin: 0 auto;
+    top: 2em;
+    left: 0;
+    right: 0;
+    width: 70%;
+    background: black;
+}
+
+.stickyheader,
+.stickyheadersearch {
     transform: translateY(-3em);
 }
 
 #searchmenu {
     display: none;
     position: absolute;
+    top: 4em;
+    right: 0;
     z-index: 2;
     background-color: white;
     width: 100%;
     height: 100%;
-    padding: 1em
+    padding: 1em;
+
 }
 
 #searchmenu h3 {
@@ -149,11 +172,16 @@ header nav ul li a,
     width: 100%;
     height: 3em;
     border: none;
+    color: var(--blue);
+    font-weight: 900;
+    font-size: 1.2em;
+    caret-color: var(--blue);
+
 }
 
 #searchmenu input::placeholder {
     color: lightgrey;
-    font-size: 1.5em;
+    font-size: 1em;
     font-weight: 900;
 }
 
@@ -164,12 +192,30 @@ header nav ul li a,
     background-size: 2em;
     border: none;
     margin-bottom: 30em;
+    transform: translateY(-3em);
 
 }
 
-.hiddenbody {
-    overflow: hidden;
+
+#searchsection .visible {
+    display: block;
+    animation: visibleanimation .1s ease-in;
+    animation-fill-mode: both;
 }
+
+@keyframes visibleanimation {
+    from {
+        opacity: 0;
+        transform: translatey(0em);
+    }
+
+    to {
+        opacity: 1;
+        display: block;
+        transform: translatey(-2em);
+    }
+}
+
 
 /*---------------- Footer styles-------------------*/
 
@@ -273,6 +319,18 @@ form #submitbutton {
     right: 0;
 }
 
+footer button {
+    background: none;
+    border: none;
+    font-size: 1em;
+    font-weight: 900;
+    color: white;
+}
+
+footer button img {
+    width: .6em;
+    margin-left: .5em;
+}
 /*====================== Homepage styles=============================*/
 
 /*  Main news styles  */
@@ -420,6 +478,7 @@ section#support img {
 }
 
 #collectionslide {
+    
 }
 
 #slidewrapper {
@@ -428,15 +487,38 @@ section#support img {
     height: 30em;
 }
 
+#slidewrappersponsor {
+    width: 100%;
+    padding: 2em 0em 4em 0em;
+}
+
+
 .slideimg {
-/*    width: 100%;*/
+    /*    width: 100%;*/
     height: 40%;
     position: absolute;
     transition: opacity .5s ease-in;
 }
 
-.slideimg + .slideimg {
+.slideimg + .slideimg,
+.slideimgsponsor + .slideimgsponsor{
     opacity: 0;
+}
+
+.slideimgsponsor {
+    height: 3em;
+     position: absolute;
+    transition: opacity .5s ease-in;
+}
+
+.highcontrast {
+    background-color: white!important; 
+}
+
+.socialicons {
+    width: 1em;
+   
+    margin: 0em 1.5em 1em 0em;
 }
 
 /*====================== collection page styles=============================*/
@@ -466,4 +548,43 @@ section ul#collectionlist li {
     font-weight: 900;
     line-height: 1em;
     font-size: 1.1em;
+}
+
+#filterinput {
+    width:100%;
+    height: 3em;
+    border: 2px lightgrey solid;
+    border-radius: .3em;
+    padding-left: 1em;
+    background: url(/images/magnifying-glass-grey.png)  no-repeat;
+    background-size: 1.5em;
+    background-position: right 1em bottom 50% ;
+    
+}
+
+#filterinput::placeholder {
+    color: grey;
+    font-weight: 600;
+}
+
+#foldmenu {
+    position: relative;
+    background-color: rgb(238, 238, 238);
+    padding: 3em 1em 3em 1em;
+    
+}
+
+#foldmenu button {
+    border: none;
+    background: none;
+    position: absolute;
+    top: 1em;
+    left: 1em;
+}
+
+#classification {
+    width: 100%;
+    padding: .5em 1em .5em 1em;
+    border: 2px lightgrey solid;
+    border-radius: 3em;
 }

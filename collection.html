@@ -11,19 +11,19 @@
 </head>
 
 <body>
-    <header id="stickyheader">
+       <header id="stickyheader">
         <nav>
-            <ul>
-                <li><a href=""><img src="images/Museum_of_Modern_Art_logo.svg" alt="MoMA Logo"></a></li>
-                <li>Tickets</li>
-                <li>Members</li>
+            <ul id="topnav">
+                <li><a href="index.html"><img src="images/Museum_of_Modern_Art_logo.svg" alt="MoMA Logo"></a></li>
+                <li><a href="">Tickets</a></li>
+                <li><a href="">Members</a></li>
             </ul>
             <ul>
-                <li>Visit</li>
-                <li>What's on</li>
+                <li><a href=""></a>Visit</li>
+                <li><a href=""></a>What's on</li>
                 <li><a href="collection.html">Art</a></li>
-                <li>Store</li>
-                <li><img src="images/magnifying-glass.png" alt="Search icon"></li>
+                <li><a href="">Store</a></li>
+                <li><button class="searchbutton"></button></li>
             </ul>
         </nav>
     </header>
@@ -35,14 +35,13 @@
                 than 89,000 works are currently available online.</p>
         </section>
         <section>
-
             <form id="filterform" action="#" method="post">
                 <div>
                     <label for="filter" aria-label="Search artists and works input"></label>
                     <input type="text" id="filterinput" name="filter" placeholder="Search Artists and works">
                     <input id="submitbutton" type="image" name="submit" src="images/email-24px.svg">
                 </div>
-                <div>
+                <div id="foldmenu">
                     <button>Filters</button>
                     <label for="classification" aria-label="classification select"></label>
                     <select type="dropdown" id="classification" name="classification">
@@ -114,7 +113,7 @@
                     <p>2019</p>
                 </li>
             </ul>
-
+<button>Show more results</button>
         </section>
         <footer>
             <footer>
