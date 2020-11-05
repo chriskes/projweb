@@ -49,4 +49,14 @@ Echter als ik dit probeer te implementeren werkt het niet. Ik dacht veel te moei
 
 Ik zie veel verschillende forms voorbij komen op w3schools, developer.mozilla, w3. Ik ben zelf bij de markup die te vinden is bij CSS-tricks gebleven aangezien dat duidelijk staat afgebeeld. Op basis van deze structuur ga ik mijn forms bouwen in mijn applicatie: https://css-tricks.com/snippets/html/example-form-markup/. 
 
- 
+## Week 6
+Om de sticky header te maken heb ik een beetje javascript en css nodig. Ik gebruik de w3schools how to om een begin te maken: https://www.w3schools.com/howto/howto_js_sticky_header.asp. Ik heb eindelijk de sticky header precies gekregen zoals op moma.org. De truc was om de header al fixed te hebben en de main de ruimte van de header naar onder te duwen. Hierdoor wordt de transitie veel geleidelijker en fijner om naar te kijken. Met Js heb ik met hulp van wat bronnen er gerdrag bij het scrollen aan gekoppeld. 
+
+## Week 7
+Ik ben aan de slag gegaan met de searchmenu in de header die op magische wijze verschijnt. 
+
+## Bronnen gebruikt 
+https://www.w3schools.com/
+https://stackoverflow.com/
+https://developer.mozilla.org/
+https://css-tricks.com/

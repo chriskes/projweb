@@ -18,8 +18,10 @@ body {
 
 }
 
-main {
+main,
+footer {
     margin: 0;
+    transform: translateY(2em);
 }
 
 ul {
@@ -35,6 +37,15 @@ section {
     padding-bottom: 4em;
 }
 
+h1 {
+    color: black;
+    font-weight: 900;
+    line-height: 1em;
+    font-size: 2em;
+    padding: 1em 0em 1em 0em;
+
+}
+
 h4 {
     color: black;
     font-weight: 900;
@@ -44,7 +55,7 @@ h4 {
 }
 
 h5 {
-    color: rgb(250, 195, 0);
+    color: rgb(255, 143, 28);
     font-weight: 900;
     line-height: 1em;
     font-size: 1.2em;
@@ -61,13 +72,17 @@ h6 {
 }
 
 .arrow {
- transform: translateY(30%);
+    transform: translateY(30%);
 }
 
 /*---------------- Header styles-------------------*/
 
 header {
-    position: relative;
+    position: fixed;
+    width: 100%;
+    background: white;
+    transition: .1s linear;
+    z-index: 2;
 }
 
 header nav ul {
@@ -77,13 +92,10 @@ header nav ul {
     font-weight: 900;
 }
 
-header nav ul:first-of-type {
-    color: rgb(0, 207, 181);
-}
 
 
 header nav ul:first-of-type img {
-    width: 7em;
+    width: 6em;
 }
 
 
@@ -96,22 +108,67 @@ header nav ul:last-of-type {
     padding: 0em 1em 0em .25em;
 }
 
-header nav ul li a {
+header nav ul li a,
+#searchmenu a {
     color: black;
     text-decoration: none;
 }
 
-.stickyheader {
-    position: fixed;
-    z-index: 10;
-    background: white;
-    width: 100%;
-    transform: translateY(-7em);
-    animation
+#topnav li a {
+    color: rgb(0, 207, 181);
 }
 
-.stickynewssection {
-    margin-top: 4em;
+
+.searchbutton {
+    width: 2em;
+    height: 2em;
+    background: url(/images/magnifying-glass.png) center no-repeat;
+    background-size: 1.5em;
+    border: none;
+}
+
+.stickyheader {
+    transform: translateY(-3em);
+}
+
+#searchmenu {
+    display: none;
+    position: absolute;
+    z-index: 2;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    padding: 1em
+}
+
+#searchmenu h3 {
+    font-weight: 900;
+}
+
+#searchmenu input {
+    width: 100%;
+    height: 3em;
+    border: none;
+}
+
+#searchmenu input::placeholder {
+    color: lightgrey;
+    font-size: 1.5em;
+    font-weight: 900;
+}
+
+.closebutton {
+    width: 2em;
+    height: 2em;
+    background: url(/images/clear-24px.svg);
+    background-size: 2em;
+    border: none;
+    margin-bottom: 30em;
+
+}
+
+.hiddenbody {
+    overflow: hidden;
 }
 
 /*---------------- Footer styles-------------------*/
@@ -150,7 +207,7 @@ footer #toplink {
     right: 0;
     top: 0;
     font-size: .9em;
-    align-content: 
+    align-content:
 }
 
 footer #toplink img {
@@ -262,7 +319,7 @@ section ul#newslist li:nth-child(even) a {
 .adresswrapper p {
     font-weight: 900;
     line-height: 1em;
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 
 .newswrapper p,
@@ -322,6 +379,15 @@ main section ul#newslist li:nth-of-type(5) .newswrapper {
 
 }
 
+#newssection .adresswrapper {
+    padding: 0em 2em 0em 2em;
+}
+
+#newssection .adresswrapper li:last-child {
+    transform: translateY(-2em);
+    font-size: .9em;
+}
+
 section#magazine img {
     width: 100%;
 }
@@ -353,14 +419,51 @@ section#support img {
     width: 100%
 }
 
+#collectionslide {
+}
+
+#slidewrapper {
+    position: relative;
+    padding: 4em 0em 4em 0em;
+    height: 30em;
+}
+
+.slideimg {
+/*    width: 100%;*/
+    height: 40%;
+    position: absolute;
+    transition: opacity .5s ease-in;
+}
+
+.slideimg + .slideimg {
+    opacity: 0;
+}
+
 /*====================== collection page styles=============================*/
 
 /*---------------- collection list styles-------------------*/
 
+section ul#collectionlist {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between
+}
+
 section ul#collectionlist li img {
-    width: 20%;
+    width: 100%;
 }
 
 section ul#collectionlist li {
-    overflow: hidden;
+    width: 45%;
+    text-overflow: hidden;
+}
+
+.underlined {
+    text-decoration: underline;
+}
+
+.introtext {
+    font-weight: 900;
+    line-height: 1em;
+    font-size: 1.1em;
 }

@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>MoMA</title>
-
     <link href="styles/style.css" rel="stylesheet">
+
 </head>
 
 <body>
-    <header>
+    <header id="stickyheader">
         <nav>
             <ul>
                 <li><a href=""><img src="images/Museum_of_Modern_Art_logo.svg" alt="MoMA Logo"></a></li>
@@ -30,68 +30,62 @@
     <main>
         <section>
             <h1>The Collection</h1>
-            <p>Our <span>evolving collection</span> contains almost 200,000
+            <p class="introtext">Our <span class="underlined">evolving collection</span> contains almost 200,000
                 works of modern and contemporary art. More
                 than 89,000 works are currently available online.</p>
         </section>
         <section>
-            <form action="">
-                <fieldset>
-                    <legend>Filter MoMA collection</legend>
 
-                    <label for="collectionsearch">
-                        <input type="text" id="collectionsearch" name="collectionsearch" placeholder="Search artists and works">
-                    </label>
-                    <div>
-                        <p>filters</p>
-                        <label for="classificationfilter">
-                            <input list="classifications" name="classificationfilter" id="classificationfilter">
-                            <datalist id="classifications">
-                                <option value="Any classification (77764)">
-                                <option value="Architecture (2385)">
-                                <option value="Design (8022)">
-                                <option value="Drawing (13599)">
-                                <option value="Film (154)">
-                            </datalist>
-                        </label>
-                        <label for="fromdate">
-                            <input list="datestart" name="fromdate" id="fromdate">
-                            <datalist id="datestart">
-                                <option value="pre-1850">
-                                <option value="1851">
-                                <option value="1852">
-                                <option value="1853">
-                                <option value="1854">
-                            </datalist>
-                        </label>
-                        <p>trough</p>
-                        <label for="todate">
-                            <input list="dateend" name="todate" id="todate">
-                            <datalist id="dateend">
-                                <option value="2020">
-                                <option value="2019">
-                                <option value="2018">
-                                <option value="2017">
-                                <option value="2016">
-                            </datalist>
-                        </label>
-                        <label for="recentbutton">Recent acquisition
-                            <input type="radio" id="recentbutton" name="recent" value="recent">
-                        </label>
-                        <label for="uncatalogedbutton">Include uncataloged works
-                            <input type="radio" id="uncatalogedbutton" name="uncataloged" value="uncataloged">
-                        </label>
-                    </div>
-                    <label for="hasimagebutton">Has image
-                        <input type="radio" id="hasimagebutton" name="hasimage" value="hasimage">
-                    </label>
-                    <label for="onviewbutton">On view
-                        <input type="radio" id="onviewbutton" name="onview" value="onview">
-                    </label>
-                </fieldset>
+            <form id="filterform" action="#" method="post">
+                <div>
+                    <label for="filter" aria-label="Search artists and works input"></label>
+                    <input type="text" id="filterinput" name="filter" placeholder="Search Artists and works">
+                    <input id="submitbutton" type="image" name="submit" src="images/email-24px.svg">
+                </div>
+                <div>
+                    <button>Filters</button>
+                    <label for="classification" aria-label="classification select"></label>
+                    <select type="dropdown" id="classification" name="classification">
+                        <option value="Any classification">Any classification (78094)</option>
+                        <option value="Architecture">Architecture (2360)</option>
+                        <option value="Audio">Audio (438)</option>
+                        <option value="Design">Design (8022)</option>
+                        <option value="Film">Film (135)</option>
+                        <option value="Installation"> Installation (363)</option>
+                    </select>
+                    <label for="fromdate" aria-label="From date select"></label>
+                    <select type="dropdown" id="fromdate" name="fromdate">
+                        <option value="Pre-1850">Pre-1850</option>
+                        <option value="1850">1850</option>
+                        <option value="1851">1851</option>
+                        <option value="1852">1852</option>
+                        <option value="1853">1853</option>
+                        <option value="1854">1854</option>
+                    </select>
+                    <label for="todate" aria-label="To date select">Through</label>
+                    <select type="dropdown" id="todate" name="todate">
+                        <option value="2020">2020</option>
+                        <option value="2019">2019</option>
+                        <option value="2018">2018)</option>
+                        <option value="2017">2017</option>
+                        <option value="2016">2016</option>
+                        <option value="2015">2015</option>
+                    </select>
+                    <label for="recent" aria-label="recent acquisition checkbox">Recent acquisition toggle</label>
+                    <input type="checkbox" id="recent" name="recent" value="recentacquisition">
+                    <label for="uncataloged" aria-label="recent acquisition checkbox">Uncataloged works toggle</label>
+                    <input type="checkbox" id="uncataloged" name="uncataloged" value="includecataloged">
+                </div>
+                <div>
+                    <label for="hasimage" aria-label="Has image toggle">Has image</label>
+                    <input type="checkbox" id="hasimage" name="hasimage" value="hasimage">
+                    <label for="onview" aria-label="Is on view toggle">On view</label>
+                    <input type="checkbox" id="onview" name="onview" value="onview">
+                </div>
             </form>
+
         </section>
-        
+
         <section>
             <p>Showing 77,764 out of <span>89,402 works</span> online</p>
             <ul id="collectionlist">
@@ -101,62 +95,80 @@
                     <p>X Poster (Untitled, 2007, Epson UltraChrome inkjet on linen, 84 x 69 inches, WG1211)</p>
                     <p>2019</p>
                 </li>
-                <li></li>
+                <li>
+                    <img src="images/x-poster.png" alt="X Poster by Wade Guyton">
+                    <p>Wade Guyton</p>
+                    <p>X Poster (Untitled, 2007, Epson UltraChrome inkjet on linen, 84 x 69 inches, WG1211)</p>
+                    <p>2019</p>
+                </li>
+                <li>
+                    <img src="images/x-poster.png" alt="X Poster by Wade Guyton">
+                    <p>Wade Guyton</p>
+                    <p>X Poster (Untitled, 2007, Epson UltraChrome inkjet on linen, 84 x 69 inches, WG1211)</p>
+                    <p>2019</p>
+                </li>
+                <li>
+                    <img src="images/x-poster.png" alt="X Poster by Wade Guyton">
+                    <p>Wade Guyton</p>
+                    <p>X Poster (Untitled, 2007, Epson UltraChrome inkjet on linen, 84 x 69 inches, WG1211)</p>
+                    <p>2019</p>
+                </li>
             </ul>
-            
+
         </section>
         <footer>
             <footer>
-        <ul>
-            <li><a href="">About us</a></li>
-            <li> <a href="">Support</a></li>
-            <li> <a href="">Research and learning</a></li>
-            <li> <a href="">Magazine</a></li>
-            <a id="toplink" href="#top">Top<img src="images/arrow_upward-24px.svg" alt="To top"></a>
-        </ul>
+                <ul>
+                    <li><a href="">About us</a></li>
+                    <li> <a href="">Support</a></li>
+                    <li> <a href="">Research and learning</a></li>
+                    <li> <a href="">Magazine</a></li>
+                    <a id="toplink" href="#top">Top<img src="images/arrow_upward-24px.svg" alt="To top"></a>
+                </ul>
 
 
-        <ul class="adresswrapper">
-            <li>
-                <p>MoMA <br>
-                    11 West <br>53 Street,<br> Manhattan
-                    Open today,<br> 10:30 a.m.–<br>5:30 p.m.
-                </p>
-            </li>
-            <li>
-                <p>MoMA PS1<br>
-                    22-25 Jackson<br> Avenue, Queens<br>
-                    Open today,<br> 12:00–8:00 p.m.
-                </p>
-            </li>
-        </ul>
-
-
-
-        <form id="myForm" action="#" method="post">
-            <div>
-                <label for="email" aria-label="E-mailadress input"></label>
-                <input type="text" id="email" name="email" placeholder="Art and ideas in your inbox" required>
-                <input id="submitbutton" type="image" name="submit" src="images/email-24px.svg">
-            </div>
-        </form>
+                <ul class="adresswrapper">
+                    <li>
+                        <p>MoMA <br>
+                            11 West <br>53 Street,<br> Manhattan
+                            Open today,<br> 10:30 a.m.–<br>5:30 p.m.
+                        </p>
+                    </li>
+                    <li>
+                        <p>MoMA PS1<br>
+                            22-25 Jackson<br> Avenue, Queens<br>
+                            Open today,<br> 12:00–8:00 p.m.
+                        </p>
+                    </li>
+                </ul>
 
 
 
+                <form id="myForm" action="#" method="post">
+                    <div>
+                        <label for="email" aria-label="E-mailadress input"></label>
+                        <input type="text" id="email" name="email" placeholder="Art and ideas in your inbox" required>
+                        <input id="submitbutton" type="image" name="submit" src="images/email-24px.svg">
+                    </div>
+                </form>
 
 
 
 
 
 
-        <h2>MoMA</h2>
-        <ul class="toswrapper">
-            <li><a href="">Privacy policy</a></li>
-            <li> <a href="">Terms of use</a></li>
-            <li> <a href="">Use high-contrast text</a></li>
-        </ul>
-        <p class="greytext">© 2020 The Museum of Modern Art</p>
-    </footer>
+
+
+
+                <h2>MoMA</h2>
+                <ul class="toswrapper">
+                    <li><a href="">Privacy policy</a></li>
+                    <li> <a href="">Terms of use</a></li>
+                    <li> <a href="">Use high-contrast text</a></li>
+                </ul>
+                <p class="greytext">© 2020 The Museum of Modern Art</p>
+            </footer>
         </footer>
     </main>
+    <script src="scripts/script.js"></script>
 </body></html>

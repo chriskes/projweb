@@ -9,27 +9,60 @@
     <title>MoMA</title>
 
     <link href="styles/style.css" rel="stylesheet">
-    <script src="scripts/script.js"></script>
 </head>
 
 <body>
     <header id="stickyheader">
         <nav>
-            <ul>
+            <ul id="topnav">
                 <li><a href=""><img src="images/Museum_of_Modern_Art_logo.svg" alt="MoMA Logo"></a></li>
-                <li>Tickets</li>
-                <li>Members</li>
+                <li><a href="">Tickets</a></li>
+                <li><a href="">Members</a></li>
             </ul>
             <ul>
-                <li>Visit</li>
-                <li>What's on</li>
+                <li><a href=""></a>Visit</li>
+                <li><a href=""></a>What's on</li>
                 <li><a href="collection.html">Art</a></li>
-                <li>Store</li>
-                <li><img src="images/magnifying-glass.png" alt="Search icon"></li>
+                <li><a href="">Store</a></li>
+                <li><button class="searchbutton"></button></li>
             </ul>
         </nav>
     </header>
     <main>
+        <section id="searchsection">
+            <div id="searchmenu">
+                <form id="emailsubscriptionform" action="#" method="post">
+                    <div>
+                        <label for="search" aria-label="Search moma.org"></label>
+                        <input type="text" id="search" name="search" placeholder="Search moma.org">
+                    </div>
+                </form>
+                <button class="closebutton"></button>
+                <ul>
+                    <li><a href="">
+                            <h3>About us</h3>
+                        </a></li>
+                    <li><a href="">
+                            <h3>Support</h3>
+                        </a></li>
+                    <li><a href="">
+                            <h3>Research and learning</h3>
+                        </a></li>
+                    <li><a href="">
+                            <h3>Magazine</h3>
+                        </a></li>
+                    <li><a href="">
+                            <h5>MoMA timed tickets</h5>
+                        </a></li>
+                    <li><a href="">
+                            <h5>MoMA PS1 timed tickets</h5>
+                        </a></li>
+                    <li><a href="">
+                            <h5>Become a member</h5>
+                        </a></li>
+                </ul>
+            </div>
+        </section>
         <section id="newssection">
             <ul id="newslist">
                 <li><a href="">
@@ -77,23 +110,27 @@
                         <div class="imagewrapper">
                             <img src="images/Moma_ps1.jpg" alt="MoMA PS1 building">
                         </div>
-
                     </a>
                 </li>
             </ul>
             <ul class="adresswrapper">
                 <li>
-                    <p>MoMA <br>
-                        11 West <br>53 Street,<br> Manhattan
-                        Open today,<br> 10:30 a.m.–<br>5:30 p.m.</p>
+                    <p>
+                        MoMA <br>11 West <br>53 Street,<br> Manhattan
+                        Open today,<br> 10:30 a.m.–<br>5:30 p.m.
+                    </p>
                 </li>
                 <li>
-                    <p>MoMA PS1<br>
+                    <p>
+                        MoMA PS1<br>
                         22-25 Jackson<br> Avenue, Queens<br>
-                        Open today,<br> 12:00–8:00 p.m.</p>
+                        Open today,<br> 12:00–8:00 p.m.
+                    </p>
                 </li>
                 <li>
-                    <p>Plan your visit <img class="arrow" src="images/arrow_right_alt-24px.svg" alt=""></p>
+                    <p>
+                        Plan your visit <img class="arrow" src="images/arrow_right_alt-24px.svg" alt="">
+                    </p>
                 </li>
             </ul>
         </section>
@@ -108,9 +145,16 @@
                 <span>Sep 15, 2020</span>
             </p>
         </section>
-        <section>
+        <section id="collectionslide">
             <h2>In the collection</h2>
+            <div id="slidewrapper">
+                <img class="slideimg" src="/images/dream-burner.png" alt="Dream Burner">
+                <img class="slideimg" src="/images/fashionable-scarves.png" alt="Fshionable scarves">
+                <img class="slideimg" src="/images/in-bamboo.png" alt="in bamboo">
+                <img class="slideimg" src="/images/glass-i-section.png" alt="Glass I section">
+            </div>
             <h6>See what's on view <img class="arrow" src="images/arrow_right_alt-24px.svg" alt=""></h6>
+
         </section>
         <section id="support">
             <img src="images/promo.JPG" alt="Help us!">
@@ -128,12 +172,10 @@
                 </div>
             </div>
         </section>
-
         <section>
             <p class="greytext">MoMA would like to thank our major partners</p>
 
         </section>
-
     </main>
     <footer>
         <ul>
@@ -143,12 +185,10 @@
             <li> <a href="">Magazine</a></li>
             <a id="toplink" href="#top">Top<img src="images/arrow_upward-24px.svg" alt="To top"></a>
         </ul>
-
-
         <ul class="adresswrapper">
             <li>
                 <p>MoMA <br>
-                    11 West <br>53 Street,<br> Manhattan
+                    11 West <br>53 Street,<br> Manhattan <br>
                     Open today,<br> 10:30 a.m.–<br>5:30 p.m.
                 </p>
             </li>
@@ -159,25 +199,13 @@
                 </p>
             </li>
         </ul>
-
-
-
-        <form id="myForm" action="#" method="post">
+        <form id="emailsubscriptionform" action="#" method="post">
             <div>
                 <label for="email" aria-label="E-mailadress input"></label>
                 <input type="text" id="email" name="email" placeholder="Art and ideas in your inbox" required>
                 <input id="submitbutton" type="image" name="submit" src="images/email-24px.svg">
             </div>
         </form>
-
-
-
-
-
-
-
-
-
         <h2>MoMA</h2>
         <ul class="toswrapper">
             <li><a href="">Privacy policy</a></li>
@@ -186,4 +214,6 @@
         </ul>
         <p class="greytext">© 2020 The Museum of Modern Art</p>
     </footer>
+
+    <script src="scripts/script.js"></script>
 </body></html>
