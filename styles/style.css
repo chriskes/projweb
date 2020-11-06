@@ -4,6 +4,7 @@
 *::before {
     box-sizing: border-box;
 }
+
 :root {
     --blue: rgb(0, 207, 181);
 }
@@ -88,6 +89,7 @@ header {
     background: white;
     transition: .1s linear;
     z-index: 2;
+    top: 0;
 }
 
 header nav ul {
@@ -101,11 +103,6 @@ header nav ul {
 
 header nav ul:first-of-type img {
     width: 6em;
-}
-
-
-header nav ul:last-of-type img {
-    width: 1em;
 }
 
 
@@ -125,12 +122,16 @@ header nav ul li a,
 
 
 .searchbutton {
-    width: 2em;
-    height: 2em;
-    background: url(/images/magnifying-glass.png) center no-repeat;
+    width: 2.5em;
+    height: 2.5em;
+    background: none;
     background-size: 1.5em;
     border: none;
     position: relative;
+}
+
+.searchbutton img {
+    width: 1.5em;
 }
 
 .underline::after {
@@ -290,7 +291,7 @@ footer .toswrapper li:last-child {
 form div {
     background: none;
     position: relative;
-    margin-bottom: 3em;
+    margin-bottom: 1em;
 }
 
 form #email {
@@ -331,6 +332,7 @@ footer button img {
     width: .6em;
     margin-left: .5em;
 }
+
 /*====================== Homepage styles=============================*/
 
 /*  Main news styles  */
@@ -477,9 +479,7 @@ section#support img {
     width: 100%
 }
 
-#collectionslide {
-    
-}
+
 
 #slidewrapper {
     position: relative;
@@ -501,29 +501,37 @@ section#support img {
 }
 
 .slideimg + .slideimg,
-.slideimgsponsor + .slideimgsponsor{
+.slideimgsponsor + .slideimgsponsor {
     opacity: 0;
 }
 
 .slideimgsponsor {
     height: 3em;
-     position: absolute;
+    position: absolute;
     transition: opacity .5s ease-in;
 }
 
 .highcontrast {
-    background-color: white!important; 
+    background-color: white !important;
 }
 
 .socialicons {
     width: 1em;
-   
+
     margin: 0em 1.5em 1em 0em;
 }
 
 /*====================== collection page styles=============================*/
 
 /*---------------- collection list styles-------------------*/
+
+section#sectionsearchfilter {
+    padding-bottom: 0;
+}
+
+#collectionbody {
+    margin-top: 4em;
+}
 
 section ul#collectionlist {
     display: flex;
@@ -551,15 +559,15 @@ section ul#collectionlist li {
 }
 
 #filterinput {
-    width:100%;
+    width: 100%;
     height: 3em;
     border: 2px lightgrey solid;
     border-radius: .3em;
     padding-left: 1em;
-    background: url(/images/magnifying-glass-grey.png)  no-repeat;
+    background: url(/images/magnifying-glass-grey.png) no-repeat;
     background-size: 1.5em;
-    background-position: right 1em bottom 50% ;
-    
+    background-position: right 1em bottom 50%;
+
 }
 
 #filterinput::placeholder {
@@ -569,9 +577,18 @@ section ul#collectionlist li {
 
 #foldmenu {
     position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
     background-color: rgb(238, 238, 238);
-    padding: 3em 1em 3em 1em;
-    
+    padding: 3em 1em 0em 1em;
+    margin-bottom: 1em;
+
+}
+
+.togglevisible {
+    display: none;
 }
 
 #foldmenu button {
@@ -582,9 +599,64 @@ section ul#collectionlist li {
     left: 1em;
 }
 
-#classification {
-    width: 100%;
+#classification,
+#fromdate,
+#todate {
     padding: .5em 1em .5em 1em;
+    margin-top: 1em;
     border: 2px lightgrey solid;
     border-radius: 3em;
+}
+
+#classification {
+    width: 100%;
+}
+
+#fromdate,
+#todate {
+    margin-right: 1.em;
+}
+
+#recent,
+#uncataloged {
+    display: block;
+}
+
+#foldmenucheck,
+#outsidemenucheck {
+    position: relative;
+}
+
+#foldmenucheck label {
+    position: relative;
+    right: -2em;
+    top: 1.2em;
+}
+
+#outsidemenucheck input {
+    position: relative;
+    right: 6em;
+    margin-right: 3em
+}
+
+#outsidemenucheck label {
+    position: relative;
+    left: 2em;
+
+}
+
+.buttonwrapper {
+    text-align: center
+}
+
+.resultsbutton {
+    background: url(/images/add-24px.svg) no-repeat;
+    background-position: right .8em top .2em;
+    background-size: 1.7em;
+    border: 2px lightgrey solid;
+    border-radius: 2em;
+    padding: .5em 3em .5em 1em;
+    font-weight: 600;
+    color: grey;
+
 }

@@ -65,6 +65,8 @@ setInterval(function () {
 
 
 var searchbutton = document.querySelector(".searchbutton");
+var filterbutton = document.querySelector(".filterbutton");
+var filter = document.querySelector(".filter");
 var searchmenu = document.querySelector("#searchmenu");
 var body = document.querySelector("main");
 
@@ -73,4 +75,8 @@ searchbutton.addEventListener("click", function() {
     searchmenu.classList.toggle("visible")
     header.classList.toggle("stickyheadersearch")
     searchbutton.classList.toggle("underline")
+});
+
+filterbutton.addEventListener("click", function() {
+    filter.classList.toggle("togglevisible")
 });

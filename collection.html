@@ -11,10 +11,10 @@
 </head>
 
 <body>
-       <header id="stickyheader">
+    <header id="stickyheader">
         <nav>
             <ul id="topnav">
-                <li><a href="index.html"><img src="images/Museum_of_Modern_Art_logo.svg" alt="MoMA Logo"></a></li>
+                <li><a href=""><img src="images/Museum_of_Modern_Art_logo.svg" alt="MoMA Logo"></a></li>
                 <li><a href="">Tickets</a></li>
                 <li><a href="">Members</a></li>
             </ul>
@@ -23,61 +23,101 @@
                 <li><a href=""></a>What's on</li>
                 <li><a href="collection.html">Art</a></li>
                 <li><a href="">Store</a></li>
-                <li><button class="searchbutton"></button></li>
+                <li><button class="searchbutton"><img src="images/magnifying-glass.png" alt=""></button></li>
             </ul>
         </nav>
     </header>
     <main>
+        <section id="searchsection">
+            <div id="searchmenu">
+                <form id="emailsubscriptionform" action="#" method="post">
+                    <div>
+                        <label for="search" aria-label="Search moma.org"></label>
+                        <input type="text" id="search" name="search" placeholder="Search moma.org">
+                    </div>
+                </form>
+                <button class="closebutton"></button>
+                <ul>
+                    <li><a href="">
+                            <h3>About us</h3>
+                        </a></li>
+                    <li><a href="">
+                            <h3>Support</h3>
+                        </a></li>
+                    <li><a href="">
+                            <h3>Research and learning</h3>
+                        </a></li>
+                    <li><a href="">
+                            <h3>Magazine</h3>
+                        </a></li>
+                    <li><a href="">
+                            <h5>MoMA timed tickets</h5>
+                        </a></li>
+                    <li><a href="">
+                            <h5>MoMA PS1 timed tickets</h5>
+                        </a></li>
+                    <li><a href="">
+                            <h5>Become a member</h5>
+                        </a></li>
+                </ul>
+            </div>
+        </section>
         <section>
             <h1>The Collection</h1>
             <p class="introtext">Our <span class="underlined">evolving collection</span> contains almost 200,000
                 works of modern and contemporary art. More
                 than 89,000 works are currently available online.</p>
         </section>
-        <section>
-            <form id="filterform" action="#" method="post">
+        <section id="sectionsearchfilter">
+            <form id="filterform" action="#">
                 <div>
                     <label for="filter" aria-label="Search artists and works input"></label>
                     <input type="text" id="filterinput" name="filter" placeholder="Search Artists and works">
                     <input id="submitbutton" type="image" name="submit" src="images/email-24px.svg">
                 </div>
                 <div id="foldmenu">
-                    <button>Filters</button>
-                    <label for="classification" aria-label="classification select"></label>
-                    <select type="dropdown" id="classification" name="classification">
-                        <option value="Any classification">Any classification (78094)</option>
-                        <option value="Architecture">Architecture (2360)</option>
-                        <option value="Audio">Audio (438)</option>
-                        <option value="Design">Design (8022)</option>
-                        <option value="Film">Film (135)</option>
-                        <option value="Installation"> Installation (363)</option>
-                    </select>
-                    <label for="fromdate" aria-label="From date select"></label>
-                    <select type="dropdown" id="fromdate" name="fromdate">
-                        <option value="Pre-1850">Pre-1850</option>
-                        <option value="1850">1850</option>
-                        <option value="1851">1851</option>
-                        <option value="1852">1852</option>
-                        <option value="1853">1853</option>
-                        <option value="1854">1854</option>
-                    </select>
-                    <label for="todate" aria-label="To date select">Through</label>
-                    <select type="dropdown" id="todate" name="todate">
-                        <option value="2020">2020</option>
-                        <option value="2019">2019</option>
-                        <option value="2018">2018)</option>
-                        <option value="2017">2017</option>
-                        <option value="2016">2016</option>
-                        <option value="2015">2015</option>
-                    </select>
-                    <label for="recent" aria-label="recent acquisition checkbox">Recent acquisition toggle</label>
-                    <input type="checkbox" id="recent" name="recent" value="recentacquisition">
-                    <label for="uncataloged" aria-label="recent acquisition checkbox">Uncataloged works toggle</label>
-                    <input type="checkbox" id="uncataloged" name="uncataloged" value="includecataloged">
+                    <button class="filterbutton">Filters<img src="images/keyboard_arrow_up-24px.svg" alt="keyboard arrow up"></button>
+                    <div class="filter">
+                        <label for="classification" aria-label="classification select"></label>
+                        <select type="dropdown" id="classification" name="classification">
+                            <option value="Any classification">Any classification (78094)</option>
+                            <option value="Architecture">Architecture (2360)</option>
+                            <option value="Audio">Audio (438)</option>
+                            <option value="Design">Design (8022)</option>
+                            <option value="Film">Film (135)</option>
+                            <option value="Installation"> Installation (363)</option>
+                        </select>
+                        <label for="fromdate" aria-label="From date select"></label>
+                        <select type="dropdown" id="fromdate" name="fromdate">
+                            <option value="Pre-1850">Pre-1850</option>
+                            <option value="1850">1850</option>
+                            <option value="1851">1851</option>
+                            <option value="1852">1852</option>
+                            <option value="1853">1853</option>
+                            <option value="1854">1854</option>
+                        </select>
+                        <label for="todate" aria-label="To date select">Through</label>
+                        <select type="dropdown" id="todate" name="todate">
+                            <option value="2020">2020</option>
+                            <option value="2019">2019</option>
+                            <option value="2018">2018)</option>
+                            <option value="2017">2017</option>
+                            <option value="2016">2016</option>
+                            <option value="2015">2015</option>
+                        </select>
+                        <div id="foldmenucheck">
+                            <label for="recent" aria-label="recent acquisition checkbox">Recent acquisition</label>
+                            <input type="checkbox" id="recent" name="recent" value="recentacquisition">
+
+                            <label for="uncataloged" aria-label="recent acquisition checkbox">Uncataloged works</label>
+                            <input type="checkbox" id="uncataloged" name="uncataloged" value="includecataloged">
+                        </div>
+                    </div>
                 </div>
-                <div>
+                <div id="outsidemenucheck">
                     <label for="hasimage" aria-label="Has image toggle">Has image</label>
                     <input type="checkbox" id="hasimage" name="hasimage" value="hasimage">
+
                     <label for="onview" aria-label="Is on view toggle">On view</label>
                     <input type="checkbox" id="onview" name="onview" value="onview">
                 </div>
@@ -86,7 +126,7 @@
         </section>
 
         <section>
-            <p>Showing 77,764 out of <span>89,402 works</span> online</p>
+            <p class="greytext">Showing 77,764 out of <span class="underlined">89,402 works</span> online</p>
             <ul id="collectionlist">
                 <li>
                     <img src="images/x-poster.png" alt="X Poster by Wade Guyton">
@@ -95,25 +135,28 @@
                     <p>2019</p>
                 </li>
                 <li>
-                    <img src="images/x-poster.png" alt="X Poster by Wade Guyton">
+                    <img src="images/dream-burner.png" alt="Dream Burner">
                     <p>Wade Guyton</p>
                     <p>X Poster (Untitled, 2007, Epson UltraChrome inkjet on linen, 84 x 69 inches, WG1211)</p>
                     <p>2019</p>
                 </li>
                 <li>
-                    <img src="images/x-poster.png" alt="X Poster by Wade Guyton">
+                    <img src="images/intake-facility.png" alt="Intake Facility">
                     <p>Wade Guyton</p>
                     <p>X Poster (Untitled, 2007, Epson UltraChrome inkjet on linen, 84 x 69 inches, WG1211)</p>
                     <p>2019</p>
                 </li>
                 <li>
-                    <img src="images/x-poster.png" alt="X Poster by Wade Guyton">
+                    <img src="images/speculum.png" alt="Speculum">
                     <p>Wade Guyton</p>
                     <p>X Poster (Untitled, 2007, Epson UltraChrome inkjet on linen, 84 x 69 inches, WG1211)</p>
                     <p>2019</p>
                 </li>
             </ul>
-<button>Show more results</button>
+            <div class="buttonwrapper">
+                <button class="resultsbutton">Show more results</button>
+            </div>
+
         </section>
         <footer>
             <footer>
