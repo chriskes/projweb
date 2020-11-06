@@ -37,7 +37,7 @@ window.addEventListener('scroll', function(){
 // BRON: https://codepen.io/leotran/pen/XdjMzj
 
 var current1 = 0;
-slides1 = document.getElementsByClassName("slideimg");
+var slides1 = document.getElementsByClassName("slideimg");
 
 setInterval(function () {
     for (var i = 0; i < slides1.length; i++) {
@@ -49,7 +49,7 @@ setInterval(function () {
 
 
 var current2 = 0;
-    slides2 = document.getElementsByClassName("slideimgsponsor");
+var slides2 = document.getElementsByClassName("slideimgsponsor");
 
 setInterval(function () {
     for (var i = 0; i < slides2.length; i++) {
